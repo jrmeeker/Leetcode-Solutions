@@ -10,13 +10,10 @@ class Solution:
         if len(s1) > len(s2):
             return False
 
-       #populate map1
+       #populate map1 and map2 with initial values
         for i in range(len(s1)):
            map1[s1[i]] = 1 + map1.get(s1[i], 0)
-
-        #populate map2 with initial values 
-        for i in range(len(s1)):
-            map2[s2[i]] = 1 + map2.get(s2[i], 0)
+           map2[s2[i]] = 1 + map2.get(s2[i], 0)
 
         if map1 == map2:
             return True
